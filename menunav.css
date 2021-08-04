@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.wrapper_menu nav{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background: #F85859;
+    transition: all 0.5s ease;
+    clip-path: circle(0% at 30px 40px);
+    z-index: 10;
+}
+
+.wrapper_menu #check {display: none;}
+.wrapper_menu .open{
+    font-size: 2rem;
+    position: fixed;
+    top: 0;
+    left: 10px;
+    cursor: pointer;
+    background: #C2A577;
+    color: #fff;
+    padding: 12px;
+    clip-path: circle();
+}
+
+.wrapper_menu nav .close{
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.wrapper_menu nav ul{
+    list-style: none;
+}
+
+.wrapper_menu nav ul li a{
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 2rem;
+    padding: 5px;
+    text-align: left;
+    color: #fff;
+}
+
+.wrapper_menu nav ul li a::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    transition: 0.3s ease;
+    background: #fff;
+}
+
+.wrapper_menu nav ul li a:hover::after{
+    width: 100%;
+}
+
+.wrapper_menu #check:checked ~ nav{
+    clip-path: circle(100%);
+}
+
+.wrapper_menu nav .dp ul li{
+    padding-bottom: 5px;
+    display: none;
+    opacity: 0;
+}
+
+.wrapper_menu nav .dp:hover li{
+    padding: 2px;
+    animation: load 1s forwards;
+    display: block;
+}
+
+@keyframes load{
+    100%{
+        opacity: 1;
+    }
+}

@@ -1,0 +1,24 @@
+.wrapper{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.section-padding{
+    padding: 15px 0;
+}
+
+.owl-dot{
+    display: inline-block;
+    height: 15px !important;
+    width: 15px !important;
+    border-radius: 50%;
+    margin: 0 5px;  
+}
+
+.owl-dots{
+    text-align: center;
+}
+
+.owl-dot.active{
+    
+}

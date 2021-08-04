@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.nav{
+    position: fixed;
+    padding-bottom: -20px;
+    left: 0;
+    z-index: 10;
+}
+
+nav ul{
+    list-style: none;
+    width: 420px;
+    background-color: #C2A577;
+    padding: 24px 0px;
+    height: 100vh;
+    clip-path: circle(10% at 10% 5%);
+}
+
+nav ul.active{
+    clip-path: circle(100% at -45% 40%);
+}
+
+nav ul .menu{
+    width: 48px;
+    height: 40px;
+    position: relative;
+    margin-bottom: 24px;
+    margin-left: 24px;
+}
+
+nav ul .menu span{
+    position: absolute;
+    left: -10%;
+    background-color: white;
+    padding: 2px;
+    width: 48px;
+    border-radius: 4px;
+}
+
+nav .menu span:nth-child(1){
+    top: 0px;
+}
+
+nav .menu span:nth-child(2){
+    top: 18px;
+    width: 28px;
+}
+
+nav .menu span:nth-child(3){
+    bottom: 0px;
+    width: 40px;
+}
+
+nav ul.active .menu span:nth-child(1){
+    top: 0px;
+    left: 23px;
+    width: 4px;
+    height: 40px;
+}
+
+nav ul.active .menu span:nth-child(2){
+    width: 40px;
+    left: 5px;
+}
+
+nav ul.active .menu span:nth-child(3){
+    padding: 0px;
+    width: 0px;
+}
+
+nav ul.active .menu{
+    transform: rotateZ(45deg);
+}
+
+a{
+    color: #fff;
+    list-style: none;
+}
+
+nav ul li{
+    padding: 10px 10px;
+    padding-top: 10px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+nav ul li:hover{
+    color: #C2A577;
+    cursor: pointer;
+    padding-left: 56px;
+}
+
+/* --DROPDOWN -- */
+
+
+
+nav .dp ul li{
+    padding-bottom: 5px;
+    display: none;
+    opacity: 0;
+}
+
+nav .dp:hover li{
+    padding: 2px;
+    animation: load 1s forwards;
+    display: block;
+}
+
+@keyframes load{
+    100%{
+        opacity: 1;
+    }
+}
+
+/* nav ul a{
+    padding: 20px 20px;
+    text-transform: uppercase;
+} */
+
+
+
+
+
+/* .prod,.links{
+    padding: 3px;
+    border: none;
+    outline: none;
+    width: 20px;
+    transition: 0.3s;
+}
+
+.list{
+    position: absolute;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.3s;
+}
+
+.newlist{
+    transform: scaleY(1);
+}
+
+.links{
+    background-color: #C2A577;
+}
+
+.links:hover{
+    background-color: #C2A577;
+    transform: scale(1.1);
+} */
+
+
+
+
